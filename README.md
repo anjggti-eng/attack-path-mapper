@@ -2,16 +2,16 @@
 
 # Attack Path Mapper
 
-### Open Source Attack Path Analysis & Visualization Platform
+### Plataforma Open Source de Análise e Visualização de Caminhos de Ataque
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB.svg)](https://python.org)
 [![React 18](https://img.shields.io/badge/React-18-61DAFB.svg)](https://reactjs.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688.svg)](https://fastapi.tiangolo.com)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-06B6D4.svg)](https://tailwindcss.com)
-[![shadcn/ui](https://img.shields.io/badge/shadcn-ui-Component_Library-white.svg)](https://ui.shadcn.com)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-Component_Library-white.svg)](https://ui.shadcn.com)
 
-[**Dalton deploy →**](#-getting-started) · [**Report Bug**](https://github.com/anjggti-eng/attack-path-mapper/issues) · [**Request Feature**](https://github.com/anjggti-eng/attack-path-mapper/issues)
+[**Como começar →**](#-início-rápido) · [**Reportar Bug**](https://github.com/anjggti-eng/attack-path-mapper/issues) · [**Solicitar Feature**](https://github.com/anjggti-eng/attack-path-mapper/issues)
 
 </div>
 
@@ -19,42 +19,42 @@
 
 <br>
 
-## Overview
+## Visão Geral
 
-Attack Path Mapper is a **self-hosted, open-source platform** that discovers organizational assets, maps their relationships, identifies attack vectors using graph theory, and visualizes everything in a real-time interactive dashboard.
+O Attack Path Mapper é uma plataforma **self-hosted e open source** que descobre ativos de uma organização, mapeia seus relacionamentos, identifica vetores de ataque usando teoria dos grafos e visualiza tudo em um dashboard interativo em tempo real.
 
-Built for **red teams**, **blue teams**, and **security engineers** who need to understand how an attacker could move through their infrastructure.
+Feito para **red teams**, **blue teams** e **engenheiros de segurança** que precisam entender como um atacante poderia se mover pela infraestrutura.
 
 <br>
 
-## Key Features
+## Funcionalidades
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### Network Discovery
-- Automated asset discovery via **Nmap**
-- Server, workstation, and network device classification
-- IP and OS fingerprinting
+### Descoberta de Rede
+- Descoberta automatizada de ativos via **Nmap**
+- Classificação de servidores, estações e dispositivos
+- Fingerprint de IP e sistema operacional
 
-### Attack Path Analysis
-- **BFS algorithm** for shortest path discovery
-- Step-by-step attack vector visualization
-- Hop count and risk assessment per path
+### Análise de Caminhos de Ataque
+- Algoritmo **BFS** para descoberta do menor caminho
+- Visualização passo a passo do vetor de ataque
+- Contagem de hops e avaliação de risco por caminho
 
 </td>
 <td width="50%" valign="top">
 
-### Interactive Graph
-- **Cytoscape.js** powered visualization
-- Node highlighting on click with neighbor discovery
-- Drag-to-rearrange with zoom controls
+### Grafo Interativo
+- Visualização com **Cytoscape.js**
+- Destaque de nós ao clicar com descoberta de vizinhos
+- Arrastar para reposicionar com controles de zoom
 
-### Risk Scoring
-- Automated scoring based on **criticality × exposure × privileges**
-- Domain Admin account detection
-- Orphaned account identification
+### Score de Risco
+- Cálculo automático baseado em **criticidade × exposição × privilégios**
+- Detecção de contas Domain Admin
+- Identificação de contas órfãs
 
 </td>
 </tr>
@@ -62,42 +62,42 @@ Built for **red teams**, **blue teams**, and **security engineers** who need to 
 
 <br>
 
-## Tech Stack
+## Stack Tecnológica
 
 <div align="center">
 
-| Layer | Technology |
-|-------|-----------|
+| Camada | Tecnologia |
+|--------|-----------|
 | **Frontend** | React 18 · TypeScript · Tailwind CSS v3 · shadcn/ui · Cytoscape.js · BentoGrid |
 | **Backend** | Python · FastAPI · SQLAlchemy · Nmap |
-| **Database** | PostgreSQL |
-| **Icons** | Lucide React |
+| **Banco de Dados** | PostgreSQL |
+| **Ícones** | Lucide React |
 
 </div>
 
 <br>
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 attack-path-mapper/
 ├── backend/
 │   ├── app/
-│   │   ├── api/routes.py          # REST endpoints
+│   │   ├── api/routes.py          # Endpoints REST
 │   │   ├── core/
-│   │   │   ├── config.py          # Environment config
-│   │   │   └── database.py        # PostgreSQL connection
-│   │   ├── models/                # SQLAlchemy models
+│   │   │   ├── config.py          # Configurações
+│   │   │   └── database.py        # Conexão PostgreSQL
+│   │   ├── models/                # Modelos SQLAlchemy
 │   │   ├── services/
-│   │   │   ├── graph.py           # Graph operations
-│   │   │   ├── risk.py            # Risk scoring engine
-│   │   │   └── discovery.py       # Nmap scanner
-│   │   └── main.py                # FastAPI entry point
+│   │   │   ├── graph.py           # Operações de grafo
+│   │   │   ├── risk.py            # Motor de score de risco
+│   │   │   └── discovery.py       # Scanner Nmap
+│   │   └── main.py                # Ponto de entrada FastAPI
 │   ├── requirements.txt
 │   └── venv/
 ├── frontend/
 │   ├── src/
-│   │   ├── components/ui/         # shadcn/ui components
+│   │   ├── components/ui/         # Componentes shadcn/ui
 │   │   │   ├── badge.tsx
 │   │   │   ├── bento-grid.tsx
 │   │   │   ├── button.tsx
@@ -107,18 +107,18 @@ attack-path-mapper/
 │   │   │   ├── label.tsx
 │   │   │   ├── select.tsx
 │   │   │   └── table.tsx
-│   │   ├── lib/utils.ts           # cn() utility
+│   │   ├── lib/utils.ts           # Utilitário cn()
 │   │   ├── pages/
-│   │   │   ├── Dashboard.tsx      # BentoGrid metrics
-│   │   │   ├── Assets.tsx         # Asset management
-│   │   │   ├── Users.tsx          # User management
-│   │   │   ├── AttackPaths.tsx    # Path analysis
-│   │   │   ├── GraphView.tsx      # Cytoscape.js graph
-│   │   │   ├── Scans.tsx          # Nmap scanner
-│   │   │   └── Reports.tsx        # Risk reports
-│   │   ├── services/api.ts        # Axios API client
+│   │   │   ├── Dashboard.tsx      # Métricas BentoGrid
+│   │   │   ├── Assets.tsx         # Gestão de ativos
+│   │   │   ├── Users.tsx          # Gestão de usuários
+│   │   │   ├── AttackPaths.tsx    # Análise de caminhos
+│   │   │   ├── GraphView.tsx      # Grafo Cytoscape.js
+│   │   │   ├── Scans.tsx          # Scanner Nmap
+│   │   │   └── Reports.tsx        # Relatórios de risco
+│   │   ├── services/api.ts        # Cliente Axios
 │   │   ├── App.tsx                # Router + Sidebar
-│   │   └── index.css              # Tailwind theme
+│   │   └── index.css              # Tema Tailwind
 │   ├── tailwind.config.js
 │   └── package.json
 └── README.md
@@ -126,124 +126,124 @@ attack-path-mapper/
 
 <br>
 
-## Getting Started
+## Início Rápido
 
-### Prerequisites
+### Pré-requisitos
 
 - **Python 3.10+**
 - **Node.js 18+**
 - **PostgreSQL 14+**
-- **Nmap** installed and in PATH
+- **Nmap** instalado e no PATH
 
-### Backend Setup
+### Configuração do Backend
 
 ```bash
-# Clone the repository
+# Clonar o repositório
 git clone https://github.com/anjggti-eng/attack-path-mapper.git
 cd attack-path-mapper/backend
 
-# Create virtual environment
+# Criar ambiente virtual
 python3 -m venv venv
 source venv/bin/activate
 
-# Install dependencies
+# Instalar dependências
 pip install -r requirements.txt
 
-# Setup database schema
-psql -U <user> -d <database> -c "CREATE SCHEMA IF NOT EXISTS attackpath;"
+# Configurar schema do banco
+psql -U <usuario> -d <banco> -c "CREATE SCHEMA IF NOT EXISTS attackpath;"
 
-# Start the server
+# Iniciar o servidor
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-### Frontend Setup
+### Configuração do Frontend
 
 ```bash
 cd ../frontend
 
-# Install dependencies
+# Instalar dependências
 npm install
 
-# Start development server
+# Iniciar servidor de desenvolvimento
 PORT=3001 npm start
 ```
 
-### Docker (Production)
+### Docker (Produção)
 
 ```bash
-# From project root
+# Da raiz do projeto
 docker-compose up -d
 ```
 
 <br>
 
-## API Reference
+## Referência da API
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/dashboard/stats` | Dashboard statistics |
-| `GET` | `/api/assets` | List all assets |
-| `POST` | `/api/assets` | Create new asset |
-| `DELETE` | `/api/assets/{id}` | Delete asset |
-| `GET` | `/api/users` | List all users |
-| `POST` | `/api/users` | Create new user |
-| `DELETE` | `/api/users/{id}` | Delete user |
-| `GET` | `/api/relationships` | List relationships |
-| `POST` | `/api/relationships` | Create relationship |
-| `POST` | `/api/attack-paths/analyze` | Run BFS analysis |
-| `GET` | `/api/attack-paths` | List attack paths |
-| `GET` | `/api/scans` | List scans |
-| `POST` | `/api/scans` | Start Nmap scan |
-| `POST` | `/api/risk/calculate` | Calculate risk scores |
-| `GET` | `/api/risk/summary` | Risk summary report |
-| `GET` | `/api/graph` | Graph data (nodes + edges) |
-
-<br>
-
-## Pages
-
-| Page | Description |
-|------|-------------|
-| **Dashboard** | BentoGrid layout with real-time security metrics |
-| **Ativos** | CRUD for network assets with type and criticality filters |
-| **Usuários** | User management with Domain Admin detection |
-| **Caminhos** | Attack path analysis with step-by-step visualization |
-| **Grafo** | Interactive Cytoscape.js graph with node highlighting |
-| **Scan** | Nmap network discovery with scan history |
-| **Relatórios** | Risk scoring dashboard with executive summary |
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `GET` | `/api/dashboard/stats` | Estatísticas do dashboard |
+| `GET` | `/api/assets` | Listar todos os ativos |
+| `POST` | `/api/assets` | Criar novo ativo |
+| `DELETE` | `/api/assets/{id}` | Excluir ativo |
+| `GET` | `/api/users` | Listar todos os usuários |
+| `POST` | `/api/users` | Criar novo usuário |
+| `DELETE` | `/api/users/{id}` | Excluir usuário |
+| `GET` | `/api/relationships` | Listar relacionamentos |
+| `POST` | `/api/relationships` | Criar relacionamento |
+| `POST` | `/api/attack-paths/analyze` | Executar análise BFS |
+| `GET` | `/api/attack-paths` | Listar caminhos de ataque |
+| `GET` | `/api/scans` | Listar scans |
+| `POST` | `/api/scans` | Iniciar scan Nmap |
+| `POST` | `/api/risk/calculate` | Calcular scores de risco |
+| `GET` | `/api/risk/summary` | Resumo de risco |
+| `GET` | `/api/graph` | Dados do grafo (nós + arestas) |
 
 <br>
 
-## Contributing
+## Páginas
 
-Contributions are welcome! Please open an issue first to discuss what you would like to change.
+| Página | Descrição |
+|--------|-----------|
+| **Dashboard** | Layout BentoGrid com métricas de segurança em tempo real |
+| **Ativos** | CRUD de ativos com filtros por tipo e criticidade |
+| **Usuários** | Gestão de usuários com detecção de Domain Admin |
+| **Caminhos** | Análise de caminhos de ataque com visualização passo a passo |
+| **Grafo** | Grafo interativo Cytoscape.js com destaque de nós |
+| **Scan** | Descoberta de rede Nmap com histórico de scans |
+| **Relatórios** | Dashboard de score de risco com resumo executivo |
+
+<br>
+
+## Contribuindo
+
+Contribuições são bem-vindas! Abra uma issue primeiro para discutir o que você gostaria de alterar.
 
 ```bash
-# Fork the repo
-# Create your feature branch
+# Fork o repositório
+# Crie sua branch de feature
 git checkout -b feature/amazing-feature
 
-# Commit your changes
-git commit -m 'Add amazing feature'
+# Commit suas alterações
+git commit -m 'Adicionar feature incrível'
 
-# Push to the branch
+# Push para a branch
 git push origin feature/amazing-feature
 
-# Open a Pull Request
+# Abra um Pull Request
 ```
 
 <br>
 
-## License
+## Licença
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distribuído sob a **Licença MIT**. Veja `LICENSE` para mais informações.
 
 <br>
 
 <div align="center">
 
-**Built with care for the security community**
+**Feito com cuidado para a comunidade de segurança**
 
-[⬆ back to top](#attack-path-mapper)
+[⬆ voltar ao topo](#attack-path-mapper)
 
 </div>
